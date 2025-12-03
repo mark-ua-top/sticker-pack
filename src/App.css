@@ -1,0 +1,114 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  background: #0e0f0f;
+  color: #c8ff63;
+  font-family: Arial, sans-serif;
+}
+
+.StickerList {
+  width: 80%;
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  padding-bottom: 40px;
+}
+
+.StickerItem {
+  background: #0f0f0f;
+  border: 2px solid #80ff66;
+  border-radius: 18px;
+  padding: 12px;
+  width: 70%;
+  justify-self: center;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 0 12px rgba(128, 255, 102, 0.3);
+}
+
+.StickerItem img {
+  width: 50%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+  background-color: #1c1f1c;
+  padding: 8px;
+  box-shadow: 0 0 10px #2e5530;
+}
+
+.StickerItem p {
+  color: #ccffcc;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.4px;
+}
+
+.StickerItem:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px rgba(128, 255, 102, 0.55);
+}
+
+.StickerItem:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.18);
+  box-shadow: 0 0 18px #b1ff5c;
+}
+
+.Choice {
+  margin-top: 30px;
+  padding: 14px 28px;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  background: #141414;
+  border: 2px solid #7aff5f;
+  color: #afff9e;
+  box-shadow: 0 0 14px rgba(122, 255, 95, 0.3);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.Choice:not(:empty) {
+  background: #1a1a1a;
+  transform: translateY(-3px);
+}
